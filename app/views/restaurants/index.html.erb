@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Restaurants</h1>
+
+
+
+ <ul class="list-group">
+<% @restaurants.each do |restaurant| %>
+ <strong>
+  <%= link_to restaurant.name, restaurant %>
+</strong>
+<% end %>
+ <%= link_to "Add new restaurant", new_restaurant_path, class: "btn btn-primary mb-3" %>
+  </ul>
